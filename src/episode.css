@@ -15,21 +15,31 @@ body{
     font-family: 'Pathway Extreme',sans-serif;
     background-image: linear-gradient(to right, #0e0d13, #021930);
 }
-.video1{
-margin-left: 270px;
-margin-top: 50px;
-min-height: 200px;
-min-width: 200px;
-}
-.btn{
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .video-wrapper {
+    margin-bottom: 20px; 
+  }
+  
+  .video1 {
+    min-height: 200px;
+    min-width: 200px;
+  }
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-}
-button{
-    height: 30px;
-    width: 60px;
-    color: #ffffff;
-    background-color: var(--secondary-color);
+    }
+    
+button {
+height: 30px;
+width: 60px;
+color: #ffffff;
+background-color: var(--secondary-color);
 }
