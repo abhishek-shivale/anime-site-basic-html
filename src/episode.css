@@ -18,6 +18,8 @@ body{
 .video1{
 margin-left: 270px;
 margin-top: 50px;
+min-height: 200px;
+min-width: 200px;
 }
 .btn{
     display: flex;
