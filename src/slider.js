@@ -135,8 +135,8 @@ async function recent(page) {
     console.error(error);
   }
 }
+let recentHTML = '';
 function recentAnime(data){
-  let recentHTML = '';
   console.log(data)
 
   for (let i = 0; i < 20; i++) {
@@ -159,7 +159,7 @@ function recentAnime(data){
       </div>
     <div class="info">
       <div class="animeNo">
-      <p>${i + 1}</p>
+      <p></p>
       </div>
       <div class="p-title">
         <p>${title}</p>
@@ -174,4 +174,31 @@ function recentAnime(data){
   recentAnimeContainer.innerHTML = recentHTML;
 }
 
-recent('1')
+function isScrollAtBottom() {
+  const scrollTop = document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+  return documentHeight - (scrollTop + windowHeight) < 100; // Adjust the threshold as needed
+}
+
+window.addEventListener('scroll', async () => {
+  if (isScrollAtBottom()) {
+    currentPage++; 
+    await recent(currentPage.toString()); 
+   }
+});
+let currentPage = 1;
+recent(currentPage.toString());function isScrollAtBottom() {
+  const scrollTop = document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+  return documentHeight - (scrollTop + windowHeight) < 100; 
+}
+
+window.addEventListener('scroll', async () => {
+  if (isScrollAtBottom()) {
+    currentPage++; 
+    await recent(currentPage.toString()); 
+  }
+});
+recent(currentPage.toString());
