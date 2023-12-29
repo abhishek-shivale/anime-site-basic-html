@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pathway+Extreme:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --secondary-color: #0565D6;
+    --optional-color:#808080;
+}
+body{
+  height: 100%;
+  width: 100%;
+    font-family: 'Pathway Extreme',sans-serif;
+    background-image: linear-gradient(to right, #0e0d13, #021930);
+}
+.headerdiv{
+  display: flex;
+  justify-content: center;
+    background-color: transparent;    
+}
+.headerdiv span{
+  background-color: transparent;
+}
+.headerdiv img{
+ 
+  height: 120px;
+  background-color: transparent;
+
+}
+/*  Slider */
+section {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  height: fit-content;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slider {
+  height: 330px;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: flex-start;
+}
+
+.slides {
+  display: flex;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.slides img:first-child {
+  display: block;
+}
+
+
+.dots {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgb(255, 255, 255);
+}
+/* scrollbar */
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+h2{
+  margin: 20px;
+  font-size: 1.9rem;
+  color: white;
+}
+  
+/* Most Popular*/
+.divmostpopular{
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: unset;
+  z-index: 1;
+  color: white;
+}
+
+.info{
+  background-color: #0b1824;
+  display: flex;
+  width: 170px;
+  height: 65px;
+  gap: 10px;
+  margin-left: 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.p-title p{
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.animeNo p {
+  color: var(--secondary-color);
+  padding-left: 10px ;
+  font-size: 1.7rem;
+}
+
+.mostpopular-i{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  width: calc(100% * 4);
+  transition: transform 0.3s ease;
+
+}
+.mostpopular-i img{
+  height: 220px;
+  width: 170px;
+}
+
+ 
+
+/*
+.buttonDiv{
+  margin-top: -300px;
+  cursor: pointer;
+  margin-left: 1290px;
+}
+.nextbtn{
+  background-color: var(--secondary-color);
+  height: 110px;
+  width: 50px;
+  border-radius: 10px;
+}
+.nextbtn i{
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.prebtn{
+  background-color: var(--secondary-color);
+  margin-top: 5px;
+  height: 110px;
+  width: 50px;
+  border-radius: 10px;
+}
+.prebtn i{
+  margin-top: 50px;
+  margin-left: 20px;
+}
+*/
+
+/* recent */
+
+.divrecent{
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: unset;
+  z-index: 1;
+  color: white;
+}

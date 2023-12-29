@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pathway+Extreme:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --secondary-color: #0565D6;
+    --optional-color:#808080;
+}
+body{
+  height: 100%;
+  width: 100%;
+    font-family: 'Pathway Extreme',sans-serif;
+    background-image: linear-gradient(to right, #0e0d13, #021930);
+}
+.anime{
+    display: flex;
+}
+.banner img{
+    margin: 30px;
+    height: 400px;
+    width: 300px;
+}
+.animeInfo{
+    margin: 70px 30px 30px 30px;
+    gap: 15px;
+    font-size: 1.3rem;
+    color: white;
+}
+span{
+    margin: 15px;
+    color: var(--secondary-color);
+}
+.watchBtn{
+margin: 40px 0px 0px 15px;
+height: 30px;
+width: 120px;
+display: flex;
+justify-content: center;
+text-align: center;
+background-color: #0565D6;
+}
