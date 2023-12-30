@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const animeName = params.get("anime");
 const EpNo = params.get("episode");
 
-const episodeApi = `https://api.anime-dex.workers.dev/episode/${animeName}-episode-${EpNo}`;
+const episodeApi = `  https://api.abhishekshivale45.workers.dev/episode/${animeName}-episode-${EpNo}`;
 
 async function fetchData() {
     try {

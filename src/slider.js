@@ -2,7 +2,7 @@ let currentSlide = 0;
 
 async function slider() {
   try {
-    const api = 'https://api.anime-dex.workers.dev/home';
+    const api = '  https://api.abhishekshivale45.workers.dev/home';
     const res = await fetch(api);
     const result = await res.json();
     const data = result['results']['anilistTrending'];
@@ -21,13 +21,13 @@ function sliderImage(data) {
     const anime = data[i];
     const title = anime['title']['userPreferred'];
     const id = anime['id'];
-
+    let url = "./anime.html?anime=" + title;
     let bannerImage = anime['bannerImage'];
     if (bannerImage == null) {
       bannerImage = anime['coverImage']['extraLarge'] || 'default_image.jpg';
     }
 
-    slidesHTML += `<img src="${bannerImage}" alt="${title}" >`;
+    slidesHTML += `<img src="${bannerImage}" alt="${title}" onclick="window.location.href='${url}'" >`;
    // dotsHTML += '<span class="dot"></span>';
 
     const slidesContainer = document.querySelector('.slides');
@@ -75,7 +75,7 @@ function sliderImage(data) {
 slider();
 async function trending(page) {
   try {
-    const api = `https://api.anime-dex.workers.dev/gogoPopular/${page}`;
+    const api = `  https://api.abhishekshivale45.workers.dev/gogoPopular/${page}`;
     const res = await fetch(api);
     const result = await res.json();
     const data = result['results'];
@@ -126,7 +126,7 @@ trending('1')
 
 async function recent(page) {
   try {
-    const api = `https://api.anime-dex.workers.dev/recent/${page}`;
+    const api = `  https://api.abhishekshivale45.workers.dev/recent/${page}`;
     const res = await fetch(api);
     const result = await res.json();
     const data = result['results'];
@@ -180,14 +180,13 @@ function isScrollAtBottom() {
   const documentHeight = document.documentElement.scrollHeight;
   return documentHeight - (scrollTop + windowHeight) < 100; // Adjust the threshold as needed
 }
-
+let currentPage = 1;
 window.addEventListener('scroll', async () => {
   if (isScrollAtBottom()) {
     currentPage++; 
     await recent(currentPage.toString()); 
    }
 });
-let currentPage = 1;
 recent(currentPage.toString());function isScrollAtBottom() {
   const scrollTop = document.documentElement.scrollTop;
   const windowHeight = window.innerHeight;

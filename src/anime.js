@@ -1,5 +1,5 @@
-const animeapi = "https://api.anime-dex.workers.dev/anime/";
-const recommendationsapi = "https://api.anime-dex.workers.dev/recommendations/";
+const animeapi = "  https://api.abhishekshivale45.workers.dev/anime/";
+const recommendationsapi = "  https://api.abhishekshivale45.workers.dev/recommendations/";
 const params = new URLSearchParams(window.location.search);
 const animeName =  params.get("anime")
 const url = animeapi + animeName
