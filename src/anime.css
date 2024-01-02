@@ -15,6 +15,14 @@ body{
     font-family: 'Pathway Extreme',sans-serif;
     background-image: linear-gradient(to right, #0e0d13, #021930);
 }
+#preloader{
+    background: #021930 url(../img/preloader.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
 .anime{
     display: flex;
 }

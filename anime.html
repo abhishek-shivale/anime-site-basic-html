@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
   <header>
     <div class="headerdiv" id="headerdiv">
       <a href="./index.html"><span><img src="/img/BoxAnime-logo.png" alt=""></span></a>
@@ -29,4 +30,10 @@
   <script src="redirect.js"></script>
 
   <script src="./src/anime.js"></script>
+  <script>
+    var loader = document.getElementById('preloader')
+    window.addEventListener("load",()=>{
+      loader.style.display = 'none';
+    })
+  </script>
 </body>

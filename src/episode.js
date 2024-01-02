@@ -37,7 +37,6 @@ function runVideo(data) {
                 video.play();
             });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            // For Safari
             video.src = anime;
             video.addEventListener('loadedmetadata', function () {
                 video.play();
@@ -52,17 +51,13 @@ function runVideo(data) {
         let animeName = params.get("anime");
         let episodeNo = params.get("episode");
     
-        // Convert the episode number to a numeric value
         episodeNo = parseInt(episodeNo);
     
-        // Increment the episode number for the next episode
         episodeNo++;
     
-        // Update the URL with the new episode number
         params.set("episode", episodeNo);
         const newUrl = `${window.location.pathname}?${params.toString()}`;
     
-        // Redirect or load the updated URL
         window.location.href = newUrl;
     }
     

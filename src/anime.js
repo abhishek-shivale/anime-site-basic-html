@@ -13,7 +13,6 @@ async function animeInfo(){
 animeInfo()
 async function animeEp(data){
     let animeHTMl = '';
-   console.log(data)
     const anime = data
     const name = anime['name'];
     const id = anime['id'];
@@ -24,7 +23,6 @@ async function animeEp(data){
     const status = anime['status']
     const ep = anime['episodes']
     const genre = anime['genre']
-    console.log(anime)
     
     animeHTMl = `
     <div class="banner">
